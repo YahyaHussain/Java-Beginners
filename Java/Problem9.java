@@ -24,10 +24,9 @@ public class Problem9 {
         System.out.println();
         sc.close();
     }
-    public static int count = 1;
     public static void subsequence(String sequence, String result, int index) {
         if (index == sequence.length()) {
-            System.out.println(count + " " +  result);
+            System.out.println(result);
             count++;
             return;
         }
