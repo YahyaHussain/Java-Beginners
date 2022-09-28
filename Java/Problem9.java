@@ -27,7 +27,6 @@ public class Problem9 {
     public static void subsequence(String sequence, String result, int index) {
         if (index == sequence.length()) {
             System.out.println(result);
-            count++;
             return;
         }
         char currChar = sequence.charAt(index);
