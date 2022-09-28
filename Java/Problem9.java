@@ -19,6 +19,7 @@ public class Problem9 {
 
         System.out.print("Enter a string: ");
         String sequence = sc.nextLine();
+        System.out.println("List of subsequences in " + sequence + ":");
         subsequence(sequence, "", 0);
 
         System.out.println();
