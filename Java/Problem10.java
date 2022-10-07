@@ -6,11 +6,12 @@ O/P: aaa
      a
 Explanation: unique subsequence among (aaa, aa, aa, a, aa, a, a) are (aaa, aa, a).
 
-???
 I/P: aba
-O/P: ab
-     ba
+O/P: aba
+     ab
+     aa
      a
+     ba
      b
 */
 
