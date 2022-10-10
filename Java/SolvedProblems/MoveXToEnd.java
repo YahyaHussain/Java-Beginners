@@ -3,10 +3,11 @@ Move all 'x' to the end of the string:
 I/P: "axbcdxe"
 O/P: "abcdexx"
 */
+package SolvedProblems;
 
 import java.util.Scanner;
 
-public class Problem7 {
+public class MoveXToEnd {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

@@ -13,8 +13,6 @@ public class BitManipulation {
                 4.  Update  (Change the bit)
         */
 
-        // int num;
-
         /*
             GET BIT:
             bit_mask: 1 << i    (1 left_shift i)    here i is the index or position
@@ -29,16 +27,15 @@ public class BitManipulation {
                 Operation => (0101 & 0100) = 0100
                 Since, (Operation != 0)    Bit at position 2 is 1.
         */
+        System.out.print("Enter a number (GET operation): ");
+        int numGet = sc.nextInt();
+        System.out.print("Enter the index of bit to be retrieved: ");
+        int indexGet = sc.nextInt();
+        int bitMaskGet = 1 << indexGet;
+        if ((numGet & bitMaskGet) == 0) System.out.println("Bit at " + indexGet + " index: 0");
+        else    System.out.println("Bit at " + indexGet + " index: 1");
         
-        // System.out.print("Enter a number: ");
-        // num = sc.nextInt();
-        // System.out.print("Enter the index of bit to be retrieved: ");
-        // int n = sc.nextInt();
-        // int bitMask = 1 << n;
-        // if ((num & bitMask) == 0) System.out.println("Bit at " + n + " index: 0");
-        // else    System.out.println("Bit at " + n + " index: 1");
-        
-
+        System.out.println();
         /*
             SET BIT:
             bit_mask: 1 << i    (1 left_shift i)    here i is the index or position
@@ -52,15 +49,14 @@ public class BitManipulation {
                 Operation => (0101 | 0010) = 0111
                 0111 is the number with set bit at index 1.
         */
+        System.out.print("Enter a number (SET operation): ");
+        int numSet = sc.nextInt();
+        System.out.print("Enter the index of bit to set: ");
+        int indexSet = sc.nextInt();
+        int bitMaskSet = 1 << indexSet;
+        System.out.println("Number after set bit: " + (numSet | bitMaskSet));
 
-        // System.out.print("Enter a number: ");
-        // num = sc.nextInt();
-        // System.out.print("Enter the index of bit to set: ");
-        // int n = sc.nextInt();
-        // int bitMask = 1 << n;
-        // System.out.println("Number after set bit: " + (num | bitMask));
-
-
+        System.out.println();
         /*
             CLEAR BIT:
             bit_mask: 1 << i    (1 left_shift i)    here i is the index or position
@@ -76,18 +72,16 @@ public class BitManipulation {
                             ~0100 => 1011
                 operation => (0101 & 1011) = 0001
                 After operation you get number with clear bit at index i.
-
         */
+        System.out.print("Enter a number (CLEAR operation): ");
+        int numClr = sc.nextInt();
+        System.out.print("Enter the index of bit to clear: ");
+        int indexClr = sc.nextInt();
+        int bitMaskClr = 1 << indexClr;
+        bitMaskClr = ~bitMaskClr;
+        System.out.println("Number after clear bit: " + (numClr & bitMaskClr)/* (num & ~bitMask) */);
         
-        // System.out.print("Enter a number: ");
-        // num = sc.nextInt();
-        // System.out.print("Enter the index of bit to clear: ");
-        // int n = sc.nextInt();
-        // int bitMask = 1 << n;
-        // bitMask = ~bitMask;
-        // System.out.println("Number after clear bit: " + (num & bitMask)/*(num & ~bitMask)*/);
-        
-
+        System.out.println();
         /*
             UPDATE BIT:
             bit_mask: 1 << i    (1 left_shift i)    here i is the index or position
@@ -111,107 +105,104 @@ public class BitManipulation {
                 operation => (0101 | 0010) = 0111
                 After operation you get number with the  positional bit updated or set.
         */
+        System.out.print("Enter a number (UPDATE operation): ");
+        int numUpdate = sc.nextInt();
+        System.out.print("Enter the index of bit to update: ");
+        int indexUpdate = sc.nextInt();
+        System.out.print("Enter the bit to be updated with: ");
+        int bitUpdate = sc.nextInt();
+        int bitMaskUpdate = 1 << indexUpdate;
+        if (bitUpdate == 0)   {
+            bitMaskUpdate = ~bitMaskUpdate;
+            System.out.println("Number after bit update: " + (numUpdate & bitMaskUpdate)/*(num & ~bitMask)*/);
+        }
+        else if (bitUpdate == 1)   {
+            System.out.println("Number after bit update: " + (numUpdate | bitMaskUpdate));
+        }
+        else    System.out.println("Invalid state! Bit can either be 0 or 1");
 
-        // System.out.print("Enter a number: ");
-        // num = sc.nextInt();
-        // System.out.print("Enter the index of bit to update: ");
-        // int n = sc.nextInt();
-        // System.out.print("Enter the bit to be updated with: ");
-        // int bit = sc.nextInt();
-        // int bitMask = 1 << n;
-        // if (bit == 0)   {
-        //     bitMask = ~bitMask;
-        //     System.out.println("Number after bit update: " + (num & bitMask)/*(num & ~bitMask)*/);
-        // }
-        // else if (bit == 1)   {
-        //     System.out.println("Number after bit update: " + (num | bitMask));
-        // }
-        // else    System.out.println("Invalid state! Bit can either be 0 or 1");
+        System.out.println();
+        // Is the given number power of two
+        System.out.print("Enter a number (Power of two): ");
+        int numIsPowOfTwo = sc.nextInt();
+        boolean powOf2 = isPowOf2(numIsPowOfTwo);
+        if (powOf2) System.out.println(numIsPowOfTwo + " is a power of 2.");
+        else    System.out.println(numIsPowOfTwo + " is not a power of 2.");
 
-        // System.out.print("Enter a number: ");
-        // int no = sc.nextInt();
-        // boolean powOf2 = isPowOf2(no);
-        // if (powOf2) System.out.println(no + " is a power of 2.");
-        // else    System.out.println(no + " is not a power of 2.");
-
-
-        /*  // TOGGLE:
-        System.out.print("Enter a number: ");
-        num = sc.nextInt();
+        System.out.println();
+        // TOGGLE (0 becomes 1 and 1 becomes 0):
+        System.out.print("Enter a number (TOGGLE operation): ");
+        int numToggle = sc.nextInt();
         System.out.print("Enter the index of bit to toggle: ");
-        int n = sc.nextInt();
-        int bit_mask = 1 << n;
-        int no = num & bit_mask;
-        if (no == 0)    {
-            System.out.println(num + " after toggle at " + n + " index: " + (num | bit_mask));
+        int indexToggle = sc.nextInt();
+        int bitMaskToggle = 1 << indexToggle;
+        int noToggle = numToggle & bitMaskToggle;
+        if (noToggle == 0)    {
+            System.out.println(numToggle + " after toggle at " + indexToggle + " index: " + (numToggle | bitMaskToggle));
         }
         else    {
-            bit_mask = ~bit_mask;
-            System.out.println(num + " after toggle " + n + " index: " + (num & bit_mask));
+            bitMaskToggle = ~bitMaskToggle;
+            System.out.println(numToggle + " after toggle " + indexToggle + " index: " + (numToggle & bitMaskToggle));
         }
-        */
 
-        /*  // Minimum no.of bits required to represent an integer in binary:
-        System.out.print("Enter a number: ");
-        num = sc.nextInt();
-        int count = 0;
-        while (num > 0) {
-            count += 1;
-            num = num >> 1;
+        System.out.println();
+        // Minimum no.of bits required to represent an integer in binary:
+        System.out.print("Enter a number (minimum bits to represent binary): ");
+        int numIntToBin = sc.nextInt();
+        int countBitsIntToBin = 0;
+        while (numIntToBin > 0) {
+            countBitsIntToBin += 1;
+            numIntToBin = numIntToBin >> 1;
         }
-        System.out.println("Minimum no.of bits required: " + count);
-        */
+        System.out.println("Minimum no.of bits required: " + countBitsIntToBin);
 
-        /*  // No.of set bits in an integer:
-        System.out.print("Enter a number: ");
-        num = sc.nextInt();
-        int count = 0;
-        while (num > 0) {
-            count += num & 1;
-            num = num >> 1;
+        System.out.println();
+        // No.of set bits in an integer:
+        System.out.print("Enter a number (set bits in integer): ");
+        int numSetInt = sc.nextInt();
+        int countSetInt = 0;
+        while (numSetInt > 0) {
+            countSetInt += numSetInt & 1;
+            numSetInt = numSetInt >> 1;
         }
-        System.out.println("No.of 1's: " + count);
-        */
+        System.out.println("No.of 1's in: " + countSetInt);
 
-        /*  // No.of clear bits in an integer:
-        System.out.print("Enter a number: ");
-        num = sc.nextInt();
-        int count = 0;
-        while (num > 0) {
-            if ((num & 1) == 0) count += 1;
-            num = num >> 1;
+        System.out.println();
+        // No.of clear bits in an integer:
+        System.out.print("Enter a number (clear bits in integer): ");
+        int numClrInt = sc.nextInt();
+        int countClrInt = 0;
+        while (numClrInt > 0) {
+            if ((numClrInt & 1) == 0) countClrInt += 1;
+            numClrInt = numClrInt >> 1;
         }
-        System.out.println("No.of 0's: " + count);
-        */
+        System.out.println("No.of 0's: " + countClrInt);
 
-        /*
-        System.out.print("Enter a binary number: ");
-        num = sc.nextInt();
-        int decimal = binaryToDecimal(num);
-        System.out.println(num + " in decimal: " + decimal);
-        */
+        System.out.println();
+        // Binary to decimal
+        System.out.print("Enter a binary number (to decimal): ");
+        int numBinToDec = sc.nextInt();
+        int decimal = binaryToDecimal(numBinToDec);
+        System.out.println(numBinToDec + " in decimal: " + decimal);
 
-        /*
-        System.out.print("Enter a decimal number: ");
-        num = sc.nextInt();
-        if (num == 0)   {
-            System.out.println(num + " in binary:\n[ 0 ]");    
+        System.out.println();
+        // Decimal to binary
+        System.out.print("Enter a decimal number (to binary): ");
+        int numDecToBIn = sc.nextInt();
+        if (numDecToBIn == 0)   {
+            System.out.println(numDecToBIn + " in binary:\n[ 0 ]");    
         }
         else    {
-            int[] decimal = decimalToBinary(num);
-            System.out.print(num + " in binary:\n[ ");
-            for (int i = 0; i < decimal.length; i++)    {
-                System.out.print(decimal[i] + " ");
+            int[] decimalArr = decimalToBinary(numDecToBIn);
+            System.out.print(numDecToBIn + " in binary:\n[ ");
+            for (int i = 0; i < decimalArr.length; i++)    {
+                System.out.print(decimalArr[i] + " ");
             }
             System.out.println("]");
         }
-        */
 
-        System.out.println();
         sc.close();
     }
-
-    /*
     public static boolean isPowOf2(int num) {
         if (num < 2)    return false;
         else    {
@@ -225,9 +216,7 @@ public class BitManipulation {
         }
         return true;
     }
-    */
 
-    /*
     public static int binaryToDecimal(int num)  {
         int decimal = 0;
         int count = 0;
@@ -239,9 +228,7 @@ public class BitManipulation {
         }
         return decimal;
     }
-    */
 
-    /*
     public static int[] decimalToBinary(int num) {
         int count = 0;
         int decimal = num;
@@ -259,5 +246,4 @@ public class BitManipulation {
 
         return binary;
     }
-    */
 }

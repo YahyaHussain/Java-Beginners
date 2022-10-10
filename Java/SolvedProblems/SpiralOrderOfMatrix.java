@@ -1,10 +1,20 @@
 /*
 Given a matrix of 'rows x cols' elements, return all elements of matrix in spiral order.
+//      1   2   3   4   5
+
+// 1    1   2   3   4   5
+// 2    6   7   8   9   10
+// 3    11  12  13  14  15
+// 4    16  17  18  19  20
+// 5    21  22  23  24  25
+
+// O/P: 1 2 3 4 5 10 15 20 25 24 23 22 21 16 11 6 7 8 9 14 19 18 17 12 13
 */
+package SolvedProblems;
 
 import java.util.Scanner;
 
-public class Problem2 {
+public class SpiralOrderOfMatrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();
@@ -65,15 +75,6 @@ public class Problem2 {
             System.out.print(nums[i] + " ");
         }
 
-        //      1   2   3   4   5
-
-        // 1    1   2   3   4   5
-        // 2    6   7   8   9   10
-        // 3    11  12  13  14  15
-        // 4    16  17  18  19  20
-        // 5    21  22  23  24  25
-
-        // O/P: 1 2 3 4 5 10 15 20 25 24 23 22 21 16 11 6 7 8 9 14 19 18 17 12 13
 
         System.out.println();
         sc.close();        

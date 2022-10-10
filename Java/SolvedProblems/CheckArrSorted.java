@@ -6,9 +6,11 @@ Check if an array is sorted (Strictly increasing):
     I/P: 1,2,3,4,4
     O/P: False
 */
+package SolvedProblems;
+
 import java.util.Scanner;
 
-public class Problem6 {
+public class CheckArrSorted {
     public static boolean chk = false;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

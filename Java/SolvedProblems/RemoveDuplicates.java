@@ -3,9 +3,11 @@ Remove duplicates in a string:
 I/P: abbcccdda
 O/P: abcd
 */
+package SolvedProblems;
+
 import java.util.Scanner;
 
-public class Problem8 {
+public class RemoveDuplicates {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

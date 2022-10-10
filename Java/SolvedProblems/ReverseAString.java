@@ -3,9 +3,11 @@ Reverse a string using recursion:
 I/P: "abcd"
 O/P: Reverse: "dcba"
 */
+package SolvedProblems;
+
 import java.util.Scanner;
 
-public class Problem4 {
+public class ReverseAString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

@@ -1,10 +1,11 @@
 /*
 Assume there is an ant, it climbs 4 meters and then suddenly slips by 3 meters in 1 minute time, how much time will it take to climb 40 meters?
 */
+package SolvedProblems;
 
 import java.util.Scanner;
 
-public class Problem1  {
+public class RiseAndFall  {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

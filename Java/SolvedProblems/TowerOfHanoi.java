@@ -22,10 +22,11 @@ D -> Destination
         ------------
           S   H   D
 */
+package SolvedProblems;
 
 import java.util.Scanner;
 
-public class Problem3 {
+public class TowerOfHanoi {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.println();

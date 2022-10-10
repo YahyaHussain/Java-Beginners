@@ -9,10 +9,11 @@ O/P: abc
      b
      c
 */
+package SolvedProblems;
 
 import java.util.Scanner;
 
-public class Problem9 {
+public class SubsequenceInString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

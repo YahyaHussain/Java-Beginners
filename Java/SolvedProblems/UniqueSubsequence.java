@@ -14,11 +14,12 @@ O/P: aba
      ba
      b
 */
+package SolvedProblems;
 
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Problem10 {
+public class UniqueSubsequence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();

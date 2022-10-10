@@ -1,16 +1,13 @@
 import java.util.Scanner;
 
-public class Strings    {
+public class ReverseAString    {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println();
 
-        /*
         System.out.print("Enter your username: ");
         String username = sc.nextLine();
-
         System.out.println("Welcome, " + username);
-        */
 
         //  Strings are immutable.
         //  .length() is used for Strings and .length is used for arrays.

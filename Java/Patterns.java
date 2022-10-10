@@ -5,9 +5,13 @@ public class Patterns {
         Scanner sc = new Scanner(System.in);
         System.out.println();
         
-        //int rows, cols;
+        int rows, cols;
 
-        /*
+        //      1   2   3   4   5
+        // 1    *   *   *   *   *
+        // 2    *   *   *   *   *
+        // 3    *   *   *   *   *
+        // 4    *   *   *   *   * 
         System.out.print("Enter the rows in solid rectangle: ");
         rows = sc.nextInt();
 
@@ -21,16 +25,13 @@ public class Patterns {
             }
 
             System.out.println();
-        }
+        }       
 
         //      1   2   3   4   5
         // 1    *   *   *   *   *
-        // 2    *   *   *   *   *
-        // 3    *   *   *   *   *
+        // 2    *               *
+        // 3    *               *
         // 4    *   *   *   *   *
-        */        
-
-        /*
         System.out.print("Enter the rows in hollow rectangle: ");
         rows = sc.nextInt();
 
@@ -51,14 +52,12 @@ public class Patterns {
             System.out.println();
         }
 
-        //      1   2   3   4   5
-        // 1    *   *   *   *   *
-        // 2    *               *
-        // 3    *               *
-        // 4    *   *   *   *   *
-        */
-
-        /*
+        //     1   2   3   4   5
+        // 1   *
+        // 2   *   *
+        // 3   *   *   *
+        // 4   *   *   *   *
+        // 5   *   *   *   *   *
         System.out.print("Enter the rows in half pyramid: ");
         rows = sc.nextInt();
 
@@ -70,16 +69,13 @@ public class Patterns {
 
             System.out.println();
         }
-
-        //     1   2   3   4   5
-        // 1   *
-        // 2   *   *
-        // 3   *   *   *
-        // 4   *   *   *   *
-        // 5   *   *   *   *   *
-        */
         
-        /*
+        //     1   2   3   4   5
+        // 1   *   *   *   *   *
+        // 2   *   *   *   *
+        // 3   *   *   *
+        // 4   *   *
+        // 5   *
         System.out.print("Enter the rows in inverted pyramid: ");
         rows = sc.nextInt();
 
@@ -91,16 +87,12 @@ public class Patterns {
 
             System.out.println();
         }
-
-        //     1   2   3   4   5
-        // 1   *   *   *   *   *
-        // 2   *   *   *   *
-        // 3   *   *   *
-        // 4   *   *
-        // 5   *
-        */
         
-        /*
+        //      1   2   3   4
+        // 1                *
+        // 2            *   *
+        // 3        *   *   *
+        // 4    *   *   *   *
         System.out.print("Enter the rows in inverted half pyramid: ");
         rows = sc.nextInt();
 
@@ -112,15 +104,12 @@ public class Patterns {
             
             System.out.println();
         }
-
-        //      1   2   3   4
-        // 1                *
-        // 2            *   *
-        // 3        *   *   *
-        // 4    *   *   *   *
-        */
         
-        /*
+        //      1   2   3   4
+        // 1    1
+        // 2    2   3
+        // 3    4   5   6
+        // 4    7   8   9   10
         System.out.print("Enter the rows in Floyd's triangle: ");
         rows = sc.nextInt();
         int num = 1;
@@ -133,17 +122,15 @@ public class Patterns {
             }
 
             System.out.println();
-        }
+        }     
 
-        //      1   2   3   4
+        //      1   2   3   4   5
         // 1    1
-        // 2    2   3
-        // 3    4   5   6
-        // 4    7   8   9   10
-        */        
-
-        /*
-        System.out.print("Enter the rows in 0 - 1 triangle: ");
+        // 2    0   1
+        // 3    1   0   1
+        // 4    0   1   0   1
+        // 5    1   0   1   0   1
+        System.out.print("Enter the rows in [0, 1] triangle: ");
         rows = sc.nextInt();
 
         for (int i = 1; i <= rows; i++)    {
@@ -156,16 +143,13 @@ public class Patterns {
 
             System.out.println();
         }
-
-        //      1   2   3   4   5
-        // 1    1
-        // 2    0   1
-        // 3    1   0   1
-        // 4    0   1   0   1
-        // 5    1   0   1   0   1
-        */
         
-        /*
+        //     1   2   3   4   5
+        // 1   1   2   3   4   5
+        // 2   1   2   3   4
+        // 3   1   2   3
+        // 4   1   2
+        // 5   1
         System.out.print("Enter the rows in inverted half pyramid with numbers: ");
         rows = sc.nextInt();
 
@@ -177,16 +161,13 @@ public class Patterns {
 
             System.out.println();
         }
-
-        //     1   2   3   4   5
-        // 1   1   2   3   4   5
-        // 2   1   2   3   4
-        // 3   1   2   3
-        // 4   1   2
-        // 5   1
-        */
         
-        /*
+        //     1   2   3   4   5   6   7   8   9
+        // 1                   *   *   *   *   *
+        // 2               *   *   *   *   *
+        // 3           *   *   *   *   *
+        // 4       *   *   *   *   *
+        // 5   *   *   *   *   *
         System.out.print("Enter the rows in rhombus: ");
         rows = sc.nextInt();
         cols = 2 * rows;
@@ -205,34 +186,15 @@ public class Patterns {
                     continue;
                 }
             }
-
-            System.out.println();
-
-        /*
-        for (int i = 1; i <= rows; i++) {
-            
-            for (int j = 1; j <= rows - i; j++) {
-                System.out.print(" ");
-            }
-            
-            for (int j = 1; j <= i; j++)    {
-                System.out.print(" " + i);
-            }
-
             System.out.println();
         }
-        *//*
-        }
-
-        //     1   2   3   4   5   6   7   8   9
-        // 1                   *   *   *   *   *
-        // 2               *   *   *   *   *
-        // 3           *   *   *   *   *
-        // 4       *   *   *   *   *
-        // 5   *   *   *   *   *
-        */
         
-        /*
+        //      1 2 3 4 5 6 7 8 9
+        // 1            1
+        // 2          2   2
+        // 3        3   3   3
+        // 4      4   4   4   4
+        // 5    5   5   5   5   5 
         System.out.print("Enter the rows in pyramid: ");
         rows = sc.nextInt();
 
@@ -247,20 +209,16 @@ public class Patterns {
             }
 
             System.out.println();
-        }
+        }  
 
         //      1 2 3 4 5 6 7 8 9
         // 1            1
-        // 2          2   2
-        // 3        3   3   3
-        // 4      4   4   4   4
-        // 5    5   5   5   5   5
-        */        
-
-        /*
+        // 2          2 1 2
+        // 3        3 2 1 2 3
+        // 4      4 3 2 1 2 3 4
+        // 5    5 4 3 2 1 2 3 4 5
         System.out.print("Enter the rows in palindromic number pyramid: ");
         rows = sc.nextInt();
-
         for (int i = 1; i <= rows; i++) {
             
             for (int j = 1; j <= rows - i; j++) {
@@ -278,15 +236,17 @@ public class Patterns {
             System.out.println();
         }
 
-        //      1 2 3 4 5 6 7 8 9
-        // 1            1
-        // 2          2 1 2
-        // 3        3 2 1 2 3
-        // 4      4 3 2 1 2 3 4
-        // 5    5 4 3 2 1 2 3 4 5
-        */
+        
 
-        /*
+        //      1 2 3 4 5 6 7 8
+        // 1    *             *
+        // 2    * *         * *
+        // 3    * * *     * * *
+        // 4    * * * * * * * *
+        // 5    * * * * * * * *
+        // 6    * * *     * * *
+        // 7    * *         * *
+        // 8    *             *
         System.out.print("Enter the rows in butterfly pattern: ");
         rows = sc.nextInt();
 
@@ -307,7 +267,6 @@ public class Patterns {
             
             System.out.println();
         }
-
         for (int i = rows; i >= 1; i--) {
 
             for (int j = 1; j <= i; j++)    {
@@ -326,20 +285,7 @@ public class Patterns {
             System.out.println();
         }
 
-
-        //      1 2 3 4 5 6 7 8
-        // 1    *             *
-        // 2    * *         * *
-        // 3    * * *     * * *
-        // 4    * * * * * * * *
-        // 5    * * * * * * * *
-        // 6    * * *     * * *
-        // 7    * *         * *
-        // 8    *             *
-        */
-
-        sc.close();
-
         System.out.println();
+        sc.close();
     }
 }
